@@ -18,6 +18,8 @@
 #include <cstdlib>
 #include <sys/types.h>
 #include <dirent.h>
+#include <regex>
+#include <stdlib.h>
 
 /**
  * @brief Project namespace
@@ -59,6 +61,18 @@ inline const bool cr_dir_exists(const std::string projroot)
         return true;
     }
     return false;
+}
+
+inline const std::string cr_tilde_replace(const std::string in_)
+{
+    std::string in = in_;
+
+    std::regex tilde{"[~]"};
+
+    const char *home = getenv("HOME");
+    if(home)
+        return std::regex_replace(in, tilde, home, std::regex_constants::match_any);
+    return in;
 }
 
 }

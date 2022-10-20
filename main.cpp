@@ -291,7 +291,7 @@ int main(int argc, char **argv)
             std::cerr << "makefile creation error!" << std::endl;
             return -1;
         }
-        std::cout << "Created makefile at root" << std::endl;
+        std::cout << "Created makefile at " << proj_path << std::endl;
     } else
     {
         if(!cr_cmakelist(proj_path, incl_dat))
@@ -299,7 +299,7 @@ int main(int argc, char **argv)
             std::cerr << "CMakeList.txt creation error!" << std::endl;
             return -1;
         }
-        std::cout << "Created empty CMakeList.txt at root" << std::endl;
+        std::cout << "Created empty CMakeList.txt at " << proj_path << std::endl;
     }
 
     //!! Create gitignore file
@@ -310,7 +310,7 @@ int main(int argc, char **argv)
             std::cerr << ".gitignore creation error!" << std::endl;
             return -1;
         }
-        std::cout << "Created .gitignore at root" << std::endl;
+        std::cout << "Created .gitignore at " << proj_path << std::endl;
     }
 
     std::cout << "\nSuccessfully created Project " << proj_name << " in " << proj_path <<

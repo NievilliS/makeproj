@@ -51,7 +51,7 @@ inline const bool cr_cmakelist(
 )
 {
     if(!dat.cmake) return true;
-    std::ofstream cmakelist(projroot + "/CMakeList.txt");
+    std::ofstream cmakelist(cr_tilde_replace(projroot + "/CMakeList.txt"));
     cmakelist << std::endl;
     cmakelist.close();
     if(cmakelist.bad())
@@ -70,7 +70,7 @@ inline const bool cr_cmakelist(
     }
 
     //! settings.json in .vscode
-    std::ofstream set_fs(projroot + "/.vscode/settings.json");
+    std::ofstream set_fs(cr_tilde_replace(projroot + "/.vscode/settings.json"));
     set_fs << "{\n\t\"cmake.sourceDirectory\": \"${workspaceFolder}/" DIR_DEV "\",\n\t\"cmake.buildDirectory\": \"${workspaceFolder}/" DIR_BUILD "\"\n}" << std::endl;
     set_fs.close();
     if(set_fs.bad())

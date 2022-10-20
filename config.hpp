@@ -105,15 +105,14 @@ Help for the directory option:"                                             "\n\
     -d FooBar           // Valid -> \"FooBar\""                             "\n\
     -DFooBar            // Valid -> \"FooBar\""                             "\n\
     -D \"FooBar\"         // Valid -> \"FooBar\""                           "\n\
-    -d\"FooBar\"          // Valid -> \"FooBar\""                           "\n\
 \n\
   However, often times directories contain spaces, in that case you want to stick with using quotation marks:\n\
     -d Foo Bar          // Invalid -> \"Foo\""                              "\n\
-    -d\"Foo Bar\"         // Valid -> \"Foo Bar\""                          "\n\
+    -d \"Foo Bar\"        // Valid -> \"Foo Bar\""                          "\n\
     -d \"    Foo Bar   \" // Valid -> \"Foo Bar\""                          "\n\
 \n\
   Practical Example:"                                                       "\n\
-    $ makeproj -d \"~/Documents/Proj/Foo Bar\" -p\"Foo Bar\" -o foobar -i cpp,debug,run\n")
+    $ makeproj -d \"~/Documents/Proj/Foo Bar\" -p \"Foo Bar\" -o foobar -i cpp,debug,run\n")
 
 #define USAGE_HELP_QQ (                                                     "\
 List of help sections:"                                                     "\n\
@@ -132,7 +131,6 @@ Help for the project name option:"                                          "\n\
     -p Foobar           // Valid -> \"Foobar\""                             "\n\
     -PFoobar            // Valid -> \"Foobar\""                             "\n\
     -P \"Foobar\"         // Valid -> \"Foobar\""                           "\n\
-    -p\"Foobar\"          // Valid -> \"Foobar\""                           "\n\
 \n\
   However, sometimes a project name can contain special characters or spaces, in that case you want to stick with quotation marks.\n\
     -p Foo bar          // Invalid -> \"Foo\""                              "\n\
@@ -153,7 +151,6 @@ Help for the output name option:"                                           "\n\
     -o foobar           // Valid -> \"foobar\""                             "\n\
     -Ofoobar            // Valid -> \"foobar\""                             "\n\
     -O \"foobar\"         // Valid -> \"foobar\""                           "\n\
-    -o\"foobar\"          // Valid -> \"foobar\""                           "\n\
 \n\
   However, some characters are to be avoided within file names."            "\n\
   This application follows this website: https://www.mtu.edu/umc/services/websites/writing/characters-avoid\n\
@@ -171,7 +168,7 @@ Help for the output name option:"                                           "\n\
     -o foo_bar.exe      // Valid but questionable on linux -> \"foo_bar.exe\"\n\
 \n\
   Practical Example:"                                                       "\n\
-    $ makeproj -d ~/Documents/Proj/Foobar -p\"Foo Bar\" -o foo_bar -i cpp,run,debug\n\n")
+    $ makeproj -d ~/Documents/Proj/Foobar -p \"Foo Bar\" -o foo_bar -i cpp,run,debug\n\n")
 
 #define USAGE_VERSION (                                                     "\
 makeproj " VERSIONSTR " by David Schoosleitner"                             "\n\

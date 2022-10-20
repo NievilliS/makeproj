@@ -68,11 +68,11 @@ List of inclusions:
 ## Practical Examples
 ```bash
 # From makeproj -?d:
-$ makeproj -d "~/Documents/Proj/Foo Bar" -p"Foo Bar" -o foobar -i cpp,debug,run
+$ makeproj -d "~/Documents/Proj/Foo Bar" -p "Foo Bar" -o foobar -i cpp,debug,run
 # From makeproj -?p:
 $ makeproj -d~/Documents/Proj/Foobar -p "Foo Bar" -o foo_bar -i c,run,debug
 # From makeproj -?o:
-$ makeproj -d ~/Documents/Proj/Foobar -p"Foo Bar" -o foo_bar -i cpp,run,debug
+$ makeproj -d ~/Documents/Proj/Foobar -p "Foo Bar" -o foo_bar -i cpp,run,debug
 # From makeproj -?i:
 $ makeproj -d~/foo -pbar -i cpp,c,debug,run,gitignore,doc,extern
       # -> Project supports cpp, c building, make run, make debug, make rundebug

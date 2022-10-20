@@ -36,7 +36,7 @@ const bool cr_makefile(
     const incl_dat_t &dat
 )
 {
-    std::ofstream f(projroot + "/makefile");
+    std::ofstream f(cr_tilde_replace(projroot + "/makefile"));
     
     //! Full headcomment
     f   << CR_MAKE_HEADCOMMENT1

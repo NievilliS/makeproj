@@ -35,14 +35,14 @@ namespace regexword
 
 _R(     _intern_space_      ,           " "                                         );
 _R(     directory_no_space  ,           " -[dD] ?([^ ]+)"                           );
-_R(     directory_bracket   ,           " -[dD] ?\" *([^\"]+) *\""                  );
+_R(     directory_bracket   ,           " -[dD] \" *([^\"]+) *\""                  );
 _R(     proj_name_no_space  ,           " -[pP] ?([^ ]+)"                           );
-_R(     proj_name_bracket   ,           " -[pP] ?\" *([^/\"]+) *\""                 );
+_R(     proj_name_bracket   ,           " -[pP] \" *([^/\"]+) *\""                 );
 _R(     outp_name_no_space  ,           " -[oO] ?([^ ]+)"                           );
-_R(     outp_name_bracket   ,           " -[oO] ?\" *([^/\"]+) *\""                 );
+_R(     outp_name_bracket   ,           " -[oO] \" *([^/\"]+) *\""                 );
 _R(     incl_gen            ,           " -[iI] ?([^ ]+)"                           );
 _R(     ccflags_rx_no_space ,           " -[fF] ?([^ ]+)"                           );
-_R(     ccflags_rx_bracket  ,           " -[fF] ?\" *([^\"]+) *\""                  );
+_R(     ccflags_rx_bracket  ,           " -[fF] \" *([^\"]+) *\""                  );
 _R(     version_rx          ,           " -[vV]"                                    );
 _R(     help_gen_rx         ,           " -[?]"                                     );
 _R(     help_rx             ,           " -[?] ?([^ ]+)"                            );

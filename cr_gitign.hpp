@@ -21,6 +21,7 @@
  *  LOCAL INCLUDES 
  */
 #include "config.hpp"
+#include "cr_dir.hpp"
 
 /**
  * @brief Project namespace
@@ -35,7 +36,7 @@ inline const bool cr_gitign(
 {
     if(!dat.gitignore) return true;
 
-    std::ofstream g(proj_path + "/.gitignore");
+    std::ofstream g(cr_tilde_replace(proj_path + "/.gitignore"));
     g <<
     "# Custom \n\
 .idea \n\
