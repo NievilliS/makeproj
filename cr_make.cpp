@@ -110,18 +110,10 @@ const bool cr_makefile(
             << std::flush;
     }
 
-    //! Script comment + mkbuild
+    //! Script comment
     f   << CR_MAKE_SCRIPTCOMMENT
-        << CR_MAKE_MKBUILD
         << std::flush;
     
-    //! Debug build dir
-    if(dat.debug)
-    {
-        f   << CR_MAKE_MKDEBUGBUILD
-            << std::flush;
-    }
-
     //! C application build
     if(dat.c && !dat.cpp)
     {
@@ -133,6 +125,17 @@ const bool cr_makefile(
     else
     {
         f   << CR_MAKE_MKDEFAULTCPP
+            << std::flush;
+    }
+
+    //! Mkdir
+    f   << CR_MAKE_MKBUILD
+        << std::flush;
+    
+    //! Debug build dir
+    if(dat.debug)
+    {
+        f   << CR_MAKE_MKDEBUGBUILD
             << std::flush;
     }
 
@@ -162,7 +165,7 @@ const bool cr_makefile(
     }
 
     //! Build C++ objects
-    else
+    if(dat.cpp || !dat.c)
     {
         f   << CR_MAKE_OBJCPP
             << std::flush;
@@ -179,7 +182,7 @@ const bool cr_makefile(
         }
 
         //! CPP
-        else
+        if(dat.cpp || !dat.c)
         {
             f   << CR_MAKE_OBJDEBUGCPP
                 << std::flush;
