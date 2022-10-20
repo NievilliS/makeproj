@@ -14,8 +14,8 @@
 /**********
  *  GENERAL DEFINES
  */
-#define VERSION 1.0_beta
-#define VERSIONSTR "1.0_beta"
+#define VERSION 1.1_beta
+#define VERSIONSTR "1.1_beta"
 
 /**********
  *  DIRECTORY DEFINES
