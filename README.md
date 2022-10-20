@@ -11,7 +11,7 @@ Creating makefiles or similar can be relatively time-consuming.
 Makeproj is best used as a user command as `/usr/bin/makeproj` .
 ### It is Linux only! (But contains a windres option for some reason)
 
-Compile via `$ make (run, debug, clean, release) [args="something"]` .
+Compile via `$ make (run, debug, clean, install) [args="something"]` .
 
 Right now you are able to create a .gitignore, a functional makefile, an empty CMakeList.txt, positively structural directories, .vscode settings for cmake, among several makefile customizations.
 

@@ -28,5 +28,8 @@ run: default
 debug: $(BUILD_PATH) $(OBJ)
 	$(CXX) -o $(OUTPUT) $(OBJ) $(CCFLAGS) -g
 
-release: default
+install: default
 	sudo cp $(OUTPUT) /usr/bin/$(OUTPUT)
+
+remove:
+	sudo rm /usr/bin/$(OUTPUT)
